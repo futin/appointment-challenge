@@ -22,7 +22,7 @@
     "debug": "^3.1.0",
     "express": "^4.16.3",
     "lodash": "^4.17.10",
-    "moment": "^2.22.2",
+    "moment": "^2.23.0",
     "mongoose": "^5.3.2"
   },
   "devDependencies": {
