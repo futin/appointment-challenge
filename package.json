@@ -4,7 +4,8 @@
   "description": "Implementation for timify challenge task",
   "main": "lib/app.js",
   "scripts": {
-    "start": "node lib/app.js"
+    "start": "node lib/app.js",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
