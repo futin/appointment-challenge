@@ -4,7 +4,8 @@
   "description": "Implementation for timify challenge task",
   "main": "lib/app.js",
   "scripts": {
-    "start": "node lib/app.js"
+    "start": "node lib/app.js",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,6 @@
   "homepage": "https://github.com/futin/timify-challenge#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "cookie-parser": "^1.4.3",
     "debug": "^3.1.0",
     "express": "^4.16.3",
     "lodash": "^4.17.10",
