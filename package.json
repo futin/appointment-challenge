@@ -1,11 +1,13 @@
 {
-  "name": "timify-challenge",
+  "name": "appointment-challenge",
   "version": "0.0.1",
-  "description": "Implementation for timify challenge task",
+  "description": "Implementation for appoubtment challenge",
   "main": "lib/app.js",
   "scripts": {
     "start": "node lib/app.js",
-    "lint": "eslint --ignore-path .gitignore ."
+    "lint": "eslint --ignore-path .gitignore .",
+    "drop-db-local": "mongo ./lib/mongodb/scripts/drop-local.js",
+    "drop-db-remote": "mongo ./lib/mongodb/scripts/drop-remote.js"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 
-#  Timify Challenge
+#  Appointment Challenge
 
-> Implementation for timify challenge task
+> Implementation for appointment challenge
 
 ## Install
