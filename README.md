@@ -39,7 +39,7 @@ This way, all collections will be created on remote mongodb instance which is ho
 
 ## Clean-up
 
-There are also couple of clean-up scripts, which basically wipes whole database created by the project.
+There are also couple of clean-up scripts, which basically wipe the whole database created by the project.
 
 In order to clean-up local mongodb database, run:
 
