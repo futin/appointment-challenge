@@ -83,4 +83,50 @@ begin: 2018-08-13 10:00 end: 2018-08-13 12:00
 begin: 2018-08-14 10:00 end: 2018-08-14 12:00
 ```
 
-`showIds` - if provided with 'yes', it will display the doctor/room ids in the response as well, beside `begin`, `end` time. I thought that it might help with testing and debugging.
+`showIds` - if provided with 'yes', it will display the doctor/room ids in the response as well, beside `begin`, `end` time. Also, the result will contain all combinations of time-slots, even if they are the same.
+
+For example:
+
+```
+GET: /availability?begin=2018-08-12T10:00:00Z&end=2018-08-14T12:00:00Z&duration=30&showIds=yes
+```
+
+Result might look look like this:
+
+```
+[
+    {
+        "begin": "2018-08-12T12:00:00.000Z",
+        "end": "2018-08-12T15:00:00.000Z",
+        "doctorId": "doctor1",
+        "roomId": "room1"
+    },
+    {
+        "begin": "2018-08-12T12:00:00.000Z",
+        "end": "2018-08-12T15:00:00.000Z",
+        "doctorId": "doctor2",
+        "roomId": "room2"
+    },
+    {
+        "begin": "2018-08-12T12:00:00.000Z",
+        "end": "2018-08-12T15:00:00.000Z",
+        "doctorId": "doctor3",
+        "roomId": "room4"
+    }
+]
+```
+
+As you can see, the same timestamp is returned twice, for every combination of doctor/room that was found.
+
+However, default behavior (showIds="falsy value") will only present unique timestamps, no matter how many combinations of doctor/room there is:
+
+```
+[
+    {
+        "begin": "2018-08-12T12:00:00.000Z",
+        "end": "2018-08-12T15:00:00.000Z",
+    }
+]
+```
+
+I've enabled this to make testing/debugging easier, but it can be easily disabled.
