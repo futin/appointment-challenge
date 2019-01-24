@@ -1,7 +1,7 @@
 {
   "name": "appointment-challenge",
   "version": "0.0.1",
-  "description": "Implementation for appoubtment challenge",
+  "description": "Implementation for appointment challenge",
   "main": "lib/app.js",
   "scripts": {
     "start": "node lib/app.js",
@@ -11,14 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/futin/timify-challenge.git"
+    "url": "git+https://github.com/futin/appointment-challenge.git"
   },
   "author": "Andreja Jevtic <andjevtic@gmail.com>",
   "license": "UNLICENCED",
-  "bugs": {
-    "url": "https://github.com/futin/timify-challenge/issues"
-  },
-  "homepage": "https://github.com/futin/timify-challenge#readme",
+  "homepage": "https://github.com/futin/appointment-challenge#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "debug": "^3.1.0",
