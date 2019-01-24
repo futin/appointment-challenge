@@ -1,24 +1,24 @@
 {
-  "name": "timify-challenge",
+  "name": "appointment-challenge",
   "version": "0.0.1",
-  "description": "Implementation for timify challenge task",
+  "description": "Implementation for appointment challenge",
   "main": "lib/app.js",
   "scripts": {
-    "start": "node lib/app.js"
+    "start": "node lib/app.js",
+    "lint": "eslint .",
+    "format": "prettier-eslint --write \"lib/**/*.js\"",
+    "drop-db-local": "mongo ./lib/mongodb/scripts/drop-local.js",
+    "drop-db-remote": "mongo ./lib/mongodb/scripts/drop-remote.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/futin/timify-challenge.git"
+    "url": "git+https://github.com/futin/appointment-challenge.git"
   },
   "author": "Andreja Jevtic <andjevtic@gmail.com>",
   "license": "UNLICENCED",
-  "bugs": {
-    "url": "https://github.com/futin/timify-challenge/issues"
-  },
-  "homepage": "https://github.com/futin/timify-challenge#readme",
+  "homepage": "https://github.com/futin/appointment-challenge#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "cookie-parser": "^1.4.3",
     "debug": "^3.1.0",
     "express": "^4.16.3",
     "lodash": "^4.17.10",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "prettier-eslint-cli": "^4.7.1"
   }
 }
