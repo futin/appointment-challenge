@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "a058f267-4f83-4eb6-b2b7-f408f924abaa",
+		"name": "TImify-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/resources simple",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"doctors\": [\n        {\n            \"id\": \"doctor1\",\n            \"name\": \"doctor1\",\n            \"times\": [\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"16:00\"\n                },\n                null\n            ]\n        }\n    ],\n    \"rooms\": [\n        {\n            \"id\": \"room1\",\n            \"name\": \"room1\",\n            \"times\": [\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"15:00\"\n                },\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"15:00\"\n                }\n            ]\n        },\n        {\n            \"id\": \"room2\",\n            \"name\": \"room2\",\n            \"times\": [\n                {\n                    \"begin\": \"15:00\",\n                    \"end\": \"16:00\"\n                }\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/resources",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"resources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/resources",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"doctors\": [\n        {\n            \"id\": \"doctor1\",\n            \"name\": \"doctor1\",\n            \"times\": [\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"15:00\"\n                },\n                {\n                    \"begin\": \"10:00\",\n                    \"end\": \"18:00\"\n                }\n            ]\n        },\n        {\n            \"id\": \"doctor2\",\n            \"name\": \"doctor2\",\n            \"times\": [\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"15:00\"\n                },\n                {\n                    \"begin\": \"13:00\",\n                    \"end\": \"14:00\"\n                },\n                {\n                    \"begin\": \"10:00\",\n                    \"end\": \"15:20\"\n                }\n            ]\n        }\n    ],\n    \"rooms\": [\n        {\n            \"id\": \"room1\",\n            \"name\": \"room1\",\n            \"times\": [\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"15:00\"\n                },\n                {\n                    \"begin\": \"8:45\",\n                    \"end\": \"11:30\"\n                },\n                {\n                    \"begin\": \"14:00\",\n                    \"end\": \"17:45\"\n                }\n            ]\n        },\n        {\n            \"id\": \"room2\",\n            \"name\": \"room2\",\n            \"times\": [\n                {\n                    \"begin\": \"14:00\",\n                    \"end\": \"15:00\"\n                },\n                {\n                    \"begin\": \"8:45\",\n                    \"end\": \"11:30\"\n                }\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/resources",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"resources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/resources full",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"doctors\": [\n        {\n            \"id\": \"doctor1\",\n            \"name\": \"doctor1\",\n            \"times\": [\n                {\n                    \"begin\": \"10:00\",\n                    \"end\": \"15:00\"\n                },\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"17:00\"\n                },\n                null,\n                {\n                    \"begin\": \"10:00\",\n                    \"end\": \"15:00\"\n                },\n                null,\n                {\n                    \"begin\": \"08:00\",\n                    \"end\": \"11:20\"\n                },\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"15:00\"\n                }\n            ]\n        },\n        {\n            \"id\": \"doctor2\",\n            \"name\": \"doctor2\",\n            \"times\": [\n                null,\n                null,\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"15:00\"\n                },\n                null,\n                {\n                    \"begin\": \"10:00\",\n                    \"end\": \"16:00\"\n                },\n                {\n                    \"begin\": \"08:00\",\n                    \"end\": \"11:00\"\n                },\n                 null\n            ]\n        }\n    ],\n    \"rooms\": [\n        {\n            \"id\": \"room1\",\n            \"name\": \"room1\",\n            \"times\": [\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"15:00\"\n                },\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"15:00\"\n                },\n                null,\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"15:00\"\n                },\n                null,\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"15:00\"\n                },\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"15:00\"\n                }\n            ]\n        },\n        {\n            \"id\": \"room2\",\n            \"name\": \"room2\",\n            \"times\": [\n                null,\n                null,\n                {\n                    \"begin\": \"12:00\",\n                    \"end\": \"15:00\"\n                },\n                null,\n                {\n                    \"begin\": \"10:00\",\n                    \"end\": \"16:00\"\n                },\n                {\n                    \"begin\": \"08:00\",\n                    \"end\": \"11:00\"\n                },\n                 null\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/resources",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"resources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/resource",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/resources",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"resources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/consultations simple",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"consultations\": [\n        {\n            \"id\": \"3\",\n            \"doctorId\": \"doctor1\",\n            \"roomId\": \"room2\",\n            \"begin\": \"2018-08-12T12:20:00.000Z\",\n            \"end\": \"2018-08-12T13:59:00Z\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/consultations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"consultations\": [\n        {\n            \"id\": \"1\",\n            \"doctorId\": \"doctor1\",\n            \"roomId\": \"room1\",\n            \"begin\": \"2018-08-12T12:15:00Z\",\n            \"end\": \"2018-08-12T14:00:00Z\"\n        },\n        {\n            \"id\": \"2\",\n            \"doctorId\": \"doctor1\",\n            \"roomId\": \"room2\",\n            \"begin\": \"2018-08-12T14:00:00Z\",\n            \"end\": \"2018-08-12T15:00:00Z\"\n        },\n        {\n            \"id\": \"3\",\n            \"doctorId\": \"doctor2\",\n            \"roomId\": \"room1\",\n            \"begin\": \"2018-08-12T14:00:00Z\",\n            \"end\": \"2018-08-12T15:00:00Z\"\n        },\n        {\n            \"id\": \"4\",\n            \"doctorId\": \"doctor1\",\n            \"roomId\": \"room1\",\n            \"begin\": \"2018-08-13T10:00:00Z\",\n            \"end\": \"2018-08-13T10:30:00Z\"\n        },\n        {\n            \"id\": \"5\",\n            \"doctorId\": \"doctor2\",\n            \"roomId\": \"room1\",\n            \"begin\": \"2018-08-14T14:30:00Z\",\n            \"end\": \"2018-08-14T15:10:00Z\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/consultations full",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"consultations\": [\n        {\n            \"id\": \"1\",\n            \"begin\": \"2018-08-12T12:00:00.000Z\",\n            \"end\": \"2018-08-12T13:00:00.000Z\",\n            \"doctorId\": \"doctor1\",\n            \"roomId\": \"room1\"\n        },\n        {\n        \t\"id\": \"2\",\n            \"begin\": \"2018-08-12T13:15:00.000Z\",\n            \"end\": \"2018-08-12T13:45:00.000Z\",\n            \"doctorId\": \"doctor1\",\n            \"roomId\": \"room1\"\n        },\n        {\n            \"id\": \"3\",\n            \"begin\": \"2018-08-17T08:20:00.000Z\",\n            \"end\": \"2018-08-17T09:15:00.000Z\",\n            \"doctorId\": \"doctor1\",\n            \"roomId\": \"room2\"\n        },\n        {\n        \t\"id\": \"4\",\n            \"begin\": \"2018-08-14T13:30:00.000Z\",\n            \"end\": \"2018-08-14T14:00:00.000Z\",\n            \"doctorId\": \"doctor2\",\n            \"roomId\": \"room2\"\n        },\n        {\n            \"id\": \"5\",\n            \"begin\": \"2018-08-16T13:30:00.000Z\",\n            \"end\": \"2018-08-16T14:00:00.000Z\",\n            \"doctorId\": \"doctor2\",\n            \"roomId\": \"room2\"\n        },\n        {\n        \t\"id\": \"6\",\n            \"begin\": \"2018-08-17T09:20:00.000Z\",\n            \"end\": \"2018-08-17T10:30:00.000Z\",\n            \"doctorId\": \"doctor2\",\n            \"roomId\": \"room2\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/consultations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/availavility",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/availability?begin=2000-08-12T08:00:00Z&end=2018-08-18T15:30:00Z&duration=5&useAllDayEvent=yes&showIds=yes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"availability"
+					],
+					"query": [
+						{
+							"key": "begin",
+							"value": "2000-08-12T08:00:00Z"
+						},
+						{
+							"key": "end",
+							"value": "2018-08-18T15:30:00Z"
+						},
+						{
+							"key": "duration",
+							"value": "5"
+						},
+						{
+							"key": "useAllDayEvent",
+							"value": "yes"
+						},
+						{
+							"key": "showIds",
+							"value": "yes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/availavility huge date-range",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/availability?begin=2010-08-12T10:00:00Z&end=2018-08-14T19:00:00Z&duration=30&useAllDayEvent=no&showIds=yes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"availability"
+					],
+					"query": [
+						{
+							"key": "begin",
+							"value": "2010-08-12T10:00:00Z"
+						},
+						{
+							"key": "end",
+							"value": "2018-08-14T19:00:00Z"
+						},
+						{
+							"key": "duration",
+							"value": "30"
+						},
+						{
+							"key": "useAllDayEvent",
+							"value": "no"
+						},
+						{
+							"key": "showIds",
+							"value": "yes"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
