@@ -1,6 +1,6 @@
 {
   "name": "appointment-challenge",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Implementation for appointment challenge",
   "main": "lib/app.js",
   "scripts": {
